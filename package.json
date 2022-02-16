@@ -2,7 +2,6 @@
   "name": "hooks-api-starter",
   "version": "1.0.0",
   "private": true,
-  "main": "midway.config.ts",
   "scripts": {
     "start": "node scripts/bootstrap",
     "dev": "mw dev --fast",
@@ -11,12 +10,19 @@
   "dependencies": {
     "@midwayjs/bootstrap": "^3.0.0",
     "@midwayjs/hooks": "^3.0.0-rc.8",
-    "@midwayjs/koa": "^3.0.0"
+    "@midwayjs/koa": "^3.0.0",
+    "@prisma/client": "^3.9.2"
   },
   "devDependencies": {
     "@midwayjs/cli": "^1.2.95",
     "@midwayjs/cli-plugin-build": "^1.2.95",
     "@midwayjs/mock": "^3.0.0",
-    "typescript": "^4.3.5"
+    "@types/node": "^17.0.18",
+    "esno": "^0.14.1",
+    "prisma": "^3.9.2",
+    "typescript": "^4.5.5"
+  },
+  "prisma": {
+    "seed": "esno ./prisma/seed.ts"
   }
 }

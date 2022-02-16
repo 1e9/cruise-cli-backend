@@ -1,0 +1,15 @@
+datasource db {
+  provider = "mongodb"
+  url      = "mongodb+srv://cruise:996icu@cluster0.n4dv4.mongodb.net/test?retryWrites=true&w=majority"
+}
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["mongoDb"]
+}
+
+model User {
+  id    Int     @id @map("_id") @default(dbgenerated()) db.ObjectID
+  email String  @unique
+  name  String?
+}
