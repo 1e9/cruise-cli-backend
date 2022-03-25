@@ -15,6 +15,7 @@
     "emitDecoratorMetadata": true,
     "outDir": "./dist"
   },
+  "typeAcquisition": { "enable": false },
   "include": ["./src"],
   "ts-node": {
     "compilerOptions": {
