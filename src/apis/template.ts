@@ -1,8 +1,27 @@
-import { Api, Get, Post, Delete, Put, ContentType, Params, Redirect } from '@midwayjs/hooks';
+import { Api, Get, Post, Delete, Put, ContentType, Params, Query, useContext } from '@midwayjs/hooks';
 import type { Context } from '@midwayjs/koa';
 
 import prisma from './prisma';
 
-export const create = Api(Get('/template'), ContentType('text/html'), async (data) => {
-  return '<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ux</title></head><body><div id="app"></div><script src="https://stnew03.beisen.com/ux/interface-person/release/dist/webpack-runtime-cec5af919e26c97d7e77.chunk.min.js"></script><script src="https://stnew03.beisen.com/ux/interface-person/release/dist/main-e860f24e1940493df6fe.chunk.min.js"></script></body></html>';
+export const get = Api(
+  Get('/template'),
+  Query<{
+    // name: string;
+    type: string;
+  }>(),
+  async (data) => {
+    const ctx = useContext<Context>();
+    return prisma.template.findMany({ where: ctx.query });
+  }
+);
+
+export const readOne = Api(Get('/template/:id'), Params<{ id: string }>(), async (data) => {
+  const ctx = useContext<Context>();
+  return await prisma.template.findUnique({
+    where: { id: ctx.params.id },
+  });
+});
+
+export const create = Api(Post('/template'), async (data) => {
+  return await prisma.template.create({ data });
 });

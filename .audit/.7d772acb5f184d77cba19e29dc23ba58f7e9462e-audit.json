@@ -1,0 +1,15 @@
+{
+  "keep": {
+    "days": true,
+    "amount": 31
+  },
+  "auditLog": ".audit/.7d772acb5f184d77cba19e29dc23ba58f7e9462e-audit.json",
+  "files": [
+    {
+      "date": 1648194053164,
+      "name": "/Users/beisen/logs/hooks-api-starter/midway-core.log.2022-03-25",
+      "hash": "f21e7d55aa3744c9e5dbca41259ed6cc"
+    }
+  ],
+  "hashType": "md5"
+}

@@ -1,0 +1,15 @@
+{
+  "keep": {
+    "days": true,
+    "amount": 31
+  },
+  "auditLog": ".audit/.21b7ea7ad4b11d8a7a0de83acdfb12e2685681cd-audit.json",
+  "files": [
+    {
+      "date": 1648194053167,
+      "name": "/Users/beisen/logs/hooks-api-starter/common-error.log.2022-03-25",
+      "hash": "66d417d8e163cd8f6b4a6a6ee2848da9"
+    }
+  ],
+  "hashType": "md5"
+}
