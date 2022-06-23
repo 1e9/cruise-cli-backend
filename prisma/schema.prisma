@@ -8,8 +8,7 @@ datasource db {
 
 generator client {
   provider        = "prisma-client-js"
-  previewFeatures = ["mongoDb"]
-  // output          = "./client"
+  output          = "./client"
 }
 
 model User {

@@ -11,12 +11,12 @@ const Prisma = {}
 exports.Prisma = Prisma
 
 /**
- * Prisma Client JS version: 3.9.2
- * Query Engine version: bcc2ff906db47790ee902e7bbc76d7ffb1893009
+ * Prisma Client JS version: 3.15.2
+ * Query Engine version: 461d6a05159055555eb7dfb337c9fb271cbd4d7e
  */
 Prisma.prismaVersion = {
-  client: "3.9.2",
-  engine: "bcc2ff906db47790ee902e7bbc76d7ffb1893009"
+  client: "3.15.2",
+  engine: "461d6a05159055555eb7dfb337c9fb271cbd4d7e"
 }
 
 Prisma.PrismaClientKnownRequestError = () => {
@@ -85,6 +85,15 @@ exports.Prisma.UserScalarFieldEnum = makeEnum({
   updatedAt: 'updatedAt'
 });
 
+exports.Prisma.TemplateScalarFieldEnum = makeEnum({
+  id: 'id',
+  name: 'name',
+  type: 'type',
+  version: 'version',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+});
+
 exports.Prisma.SortOrder = makeEnum({
   asc: 'asc',
   desc: 'desc'
@@ -97,7 +106,8 @@ exports.Prisma.QueryMode = makeEnum({
 
 
 exports.Prisma.ModelName = makeEnum({
-  User: 'User'
+  User: 'User',
+  Template: 'Template'
 });
 
 /**
